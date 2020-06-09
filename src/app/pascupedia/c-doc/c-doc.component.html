@@ -1,0 +1,72 @@
+<h2>C</h2>
+Linguaggio procedurale (imperativo) di basso livello pertanto è possibile creare programmi molto performanti e per
+questo motivo viene utilizzato in molte applicazioni che necessitano di prestazioni elevate (sistemi operativi, giochi
+per PC, applicazioni embedded, ecc.). Viene compilato, tramite compilatore (ad esempio GCC) e linker, per ottenere il
+sorgente
+eseguibile dal sistema operativo (linguaggio macchina). Solitamente i file compilati in ambiente Windows presentano
+estensione '.obj' invece in ambiente UNIX presentano estensione '.o'. Linguaggio di tipo
+
+<h3>Compilazione</h3>
+La compilazione di un sorgente C è eseguita in 3 fasi:
+<ul>
+   <li>Precompilazione</li>
+   <li>Compilazione</li>
+   <li>Linking</li>
+</ul>
+
+La <b>Precompilazione</b> è eseguita dal precompilatore, che si occupa di includere i files header delle librerie
+utilizzate, sostituire i valori delle costanti e delle macro definite tramite istruzioni #define, ecc.
+<br>
+La <b>Compilazione</b> è eseguita dal compilatore, che si occupa di trasformare i files sorgenti ottenuti dal
+precompilatori in
+files oggetto. Un file oggetto è un file che contiene tutte le informazioni necessare al linker per creare il file
+eseguibile (tabelle dei simboli, ecc.).
+<br>
+Il <b>Linking</b> è eseguito dal linker, che, come dice il nome stesso, si occupa di unire i vari files oggetti e di
+collegare tutte le variabili e le funzioni.
+
+<h3>Organizzazione</h3>
+<ol>
+   <li>File header (.h)</li>
+   <li>File sorgente (.c)</li>
+</ol>
+
+<h3>Tipi</h3>
+<ul>
+   <li>char = valore numerico che corrispone ad un codice ASCII di un carattere. Dimensione: 1 byte. Range: 0 -> 255
+      (unsigned) oppure -128 -> 127 (signed)</li>
+   <li>int = utilizzato per contenere numeri interi. Dimensione: 4 byte(32 bit). Range: 0 -> (2^32)-1 (unsigned) oppure
+      -2^31 -> +(2^31)-1 (signed)
+   </li>
+   <li>short int = Dimensione: 2 byte (16 bit)</li>
+   <li>long int = Dimensione: 4 byte (32 bit)</li>
+   <li>float = per numeri con la virgola. Dimensione: 4 byte(32 bit)</li>
+   <li>double = per numeri con la virgola. Dimensione: 8 byte(64 bit)</li>
+</ul>
+
+<h3>Astrazioni</h3>
+L'elemento "portante" dei programmi C è costitusito infatti dalle funzioni
+<h4>Funzioni</h4>
+
+<pre
+   class="p-3"><code [highlight]="code" [lineNumbers]="lineNumbers" (highlighted)="onHighlight($event)" [languages]="languages"></code></pre>
+<h4>Highlight response --> DA RIMUOVERE</h4>
+<pre>{{ response | json }}</pre>
+<h3>Keywords</h3>
+<ul>
+   <li>static</li>
+   <li>signed / unsigned: qualificatori per definire se una variabile è con o senza segno. Utilizzabile con tipi:
+      char,int</li>
+   <li>struct : converte, in modo esplicito, una variabile in un determinato tipo</li>
+   <li>typedef struct : per utilizzare i metodi della classe padre</li>
+   <li>enum : serve per controllare se una variabile va in overflow</li>
+   <li>continue : fa continuare il ciclo for senza eseguire il codice sottostante che in pratica viene saltato</li>
+   <li>delegate : Firma di un metodo che permette l'incapsulamento di un metodo anche anonimo e consente il passsaggio
+      di metodi come se fossero parametri</li>
+</ul>
+
+<h3>Memoria</h3>
+<h5>Garbage Collector NON presente!!!</h5>
+
+<h3>Documentazione</h3>
+Si utilizzano commenti XML con diverse keyword

@@ -1,0 +1,27 @@
+image: node:latest
+
+pages:
+   cache:
+      paths:
+         - node_modules/
+
+   script:
+      # NOTE: INSERIRE TUTTI I PACCHETTI INSTALLATI NEL PROGETTO
+      - npm i -g @angular/cli
+      - npm install
+      # - npm i -g ngx-highlightjs highlight.js
+      # - npm i -g @ng-bootstrap/ng-bootstrap
+      # - npm i -g bootstrap
+      # - npm i -g @fortawesome/angular-fontawesome
+      # - npm i -g @fortawesome/fontawesome-svg-core
+      # - npm i -g @fortawesome/free-solid-svg-icons
+      # - npm i -g @fortawesome/free-brands-svg-icons
+      - npm run buildProd
+
+   artifacts:
+      paths:
+         - public
+
+   only:
+      - master
+      - pagess

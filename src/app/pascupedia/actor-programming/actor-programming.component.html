@@ -1,0 +1,43 @@
+<h2>Actor Programming</h2>
+<h6>""</h6>
+
+
+<h4>Modello computazionale di riferimento: ...</h4>
+
+<h3>Astrazioni</h3>
+
+<h4>Attore</h4>
+Un attore è un'entità computazionale che, in risposta a un messaggio, può:
+<ul>
+   <li>mandare un numero finito di messaggi ad altri attori</li>
+   <li>creare un numero finito di nuovi attori</li>
+   <li>descrivere il comportamento da adottare per il prossimo messaggio che riceve</li>
+</ul>
+Un attore può comunicare solo con gli attori a cui è connesso. Le connessioni possono essere implementate in modi
+diversi:
+<ul>
+   <li>fisicamente</li>
+   <li>indirizzi di memoria o disco</li>
+   <li>indirizzi di rete/email</li>
+</ul>
+
+Gli attori sono un'astrazione unica: entità autonome, possibilmente distribuite su macchine diverse, che eseguono
+concorrentemente e comunicano tramite message passing asincrono. Non c'è memoria condivisa, ogni attore ha una mailbox.
+
+<h3>Linguaggi:</h3>
+<ul>
+   <li>Erlang</li>
+   <li>SALSA</li>
+   <li>AmbientTalk</li>
+   <li>HTML5 WebWorker,</li>
+   <li>DART</li>
+</ul>
+
+<h3>Framework:</h3>
+<ul>
+   <li>JVM: Scala Actors, ActorFoundry</li>
+   <li>.NET: SALSA</li>
+   <li>AmbientTalk</li>
+   <li>HTML5 WebWorker</li>
+   <li>DART</li>
+</ul>

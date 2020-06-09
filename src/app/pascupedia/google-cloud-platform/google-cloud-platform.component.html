@@ -1,0 +1,74 @@
+<h2>Google Cloud Platform (GCP)</h2>
+<p>La Google Cloud Platform è una suite di servizi di cloud computing basata sulla stessa infrastruttura che Google usa
+   per i suoi prodotti, come Gmail, YouTube o Google Search. </p>
+
+<h3>Core</h3>
+
+<h4>Cloud computing</h4>
+<ol>
+   <li>Servizio On-Demand e Self-Service: Quando c'è bisogno di una risorsa (Hardware) possiamo crearla in qualsiasi
+      momento attraverso l'ambiente messo a disposizione da Google (senza alcun intervento umano)</li>
+   <li>Broad network access: Le risorse e l'ambiente sono accessibi online, indipendentemente da dove ci troviamo</li>
+   <li>Resource polling: Il cloud provider fa economia di scala, cioè si procura una grande quantità di risorse e le
+      mette a disposizione dei clienti</li>
+   <li>Rapid elasticity: Le risorse sono elastiche, se occorre è possibile richiederne di più ma anche ridurle. Questo
+      ridimensionamento può avvenire anche in maniera automatica</li>
+   <li>Measured service: Paghi solo per le risorse che utilizzi</li>
+</ol>
+
+<h4>Prodotti messi a disposizione da GCP</h4>
+<ol>
+   <li>Compute Engine (IaaS - Infrastucture as a Service): Mettono a disposizione risorse (CPU, Storage, Network),
+      lasciando al cliente la configurazione, monitoraggio, aggionarnamento,...</li>
+   <li>Kubernetes Engine (Ibrido tra punto 1 e 3): Ambiente gestito e pronto per la produzione dedicato al deployment di
+      applicazioni containerizzate</li>
+   <li>App Engine (PaaS - Platform as a Service): Mette a disposizione una piattaforma dove eseguire apps. Il cliente
+      deve solo preoccuparsi del codice della propria app</li>
+   <li>Cloud Functions (Serverless logic): Servizi serverless completamente gestiti con architettura completamente
+      trasparente senza necessita di nessun tipo di configurazione</li>
+   <li>Managed services (Automated elastic resources)</li>
+</ol>
+
+<h4>Networking e sicurezza</h4>
+<ol>
+   <li>Rappresenta un datacenter, intesi come ambienti isolati ma all'interno di una stessa area geografica. Le zone
+      all'interno di una stessa regione non condividono lo stesso point-of-failure quindi un guasto ad una zona non
+      compromette l'altra. Questo permette la <b>resilienza</b> (capacità dell'applicazione di addattarsi alle
+      condizioni e garantire la disponibilità dei serivizi erogati).</li>
+   <li>Regione: Singola area geografica lontana almeno 160km da un'altra regione (Esempio di regione: Inghilterra)</li>
+   <li>Multi-Regione: Assieme di più regioni (Esempio: Europa). Un'applicazione eseguita a questo livello permette la
+      diminuzione della latenza di rete.</li>
+</ol>
+
+<h6>Rete Virtual Private Cloud (VPC)</h6>
+Ogni progetto GCP contiene la propria rete VPC attraverso la quale è possibile fornire, connettere o isolare ogni
+risorsa del progetto.
+Le reti VPC sono globali mentre le sottoreti della stessa VPC sono regionali. Ogni sottorete fa quindi riferimento ad
+una sola regione ma stando all'interno della stessa VPC permette la comunicazione tra diverse regioni. Per l'accesso da
+internet (esterno) alle reti VPC, è sufficiente creare degli IP pubblici mappati sugli indirizzi interni che si vogliono
+esporre.
+
+<h6>Cloud Load Balancing</h6>
+Attraverso il <b>Cloud Load Balancing</b> è possibile presentare la propria applicazione attraverso un'unico IP
+pubblico. Questo strumento permette di effettuare bilanciamento del carico e scaling automatico delle risorse operando
+attraverso le regioni dove è attiva l'applicazione, effettuando reindirizzamenti agli indirizzi interno delle diverse
+zone in diverse regioni. I Load Balancing di Google non richiedono <b>pre-warning</b> cioè non è necessario configurarli
+per picchi di accesso o carichi elevati in momenti di punta.
+
+<h6>Cloud Content Delivery Network (CDN)</h6>
+Realizza una cache dei contenuti richiesti dagli utenti e glieli fornisce successivamente dal nodo più vicino a loro,
+minimizzando latenza e banda utilizzata. <b>In GCP si paga la banda in uscita (standard) ed il costo della banda del CDN
+   è inferiore rispetto alla standard</b>
+
+<h4>Cloud IAM (Identity and Access Management)</h4>
+
+<ul>
+   <li>Risorse (Macchina virtuale, Storage) = artefatti che permettono di creare e gestire per immagazzinare e i
+      nostri dati. (Ogni risorsa può essere utilizzata in 1 solo progetto)</li>
+   <li>Progetti = Assieme di risorse</li>
+   <li>Cartelle =</li>
+   <li>Org Node =</li>
+</ul>
+<h3>Big Data</h3>
+
+<h3>Kubernetes</h3>
