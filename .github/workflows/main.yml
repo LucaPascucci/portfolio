@@ -23,7 +23,7 @@ jobs:
 
     # Runs a single command using the runners shell
     - name: All things angular
-      run: AhsanAyaz/angular-deploy-gh-pages-actions
+      uses: AhsanAyaz/angular-deploy-gh-pages-actions
       with:
         github_access_token: ${{ secrets.ACCESS_TOKEN }} # see the Configuration section for how you can create secrets
         build_configuration: staging # The build environment for the app. please look configurations in your angular.json
