@@ -5,7 +5,7 @@ name: Build and Deploy
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
 on:
-  pull-request:
+  push:
     branches:
       - master
 
@@ -22,11 +22,11 @@ jobs:
     - uses: actions/checkout@v2
 
     # Runs a single command using the runners shell
-    - name: All things angular
-      run: AhsanAyaz/angular-deploy-gh-pages-actions
+    - name: Angular Deploy gh-pages Actions
+      uses: AhsanAyaz/angular-deploy-gh-pages-actions@v1.3.1
       with:
-        github_access_token: 0d134b85c454a9b971fbc88d2695147d9b587792 # see the Configuration section for how you can create secrets
-        build_configuration: staging # The build environment for the app. please look configurations in your angular.json
-        base_href: /my-project/   # make sure this corresponds to https://<your_username>.github.io/<base_href>/
+        github_access_token: ${{ secrets.ACCESS_TOKEN }} # see the Configuration section for how you can create secrets
+        build_configuration: production # The build environment for the app. please look configurations in your angular.json
+        base_href: /portfolio/   # make sure this corresponds to https://<your_username>.github.io/<base_href>/
         deploy_branch: gh-pages # The branch the action should deploy to.
         angular_dist_build_folder: dist # The folder where your project is supposed to be after running ng build by the action.
