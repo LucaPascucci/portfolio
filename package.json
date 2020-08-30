@@ -5,9 +5,8 @@
     "ng": "ng",
     "serve": "ng serve --open --port 4201",
     "serve_opt": "ng serve --open=true --optimization=true",
-    "serve_prod": "ng serve --open=true --prod=true",
+    "serve_prod": "ng serve --open=true --prod",
     "build": "ng build --prod",
-    "buildProd": "ng build --base-href=/portfolio/",
     "documentation": "npx compodoc -p tsconfig.app.json --serve --port 4021 --watch --theme=Readthedocs --open"
   },
   "private": true,
