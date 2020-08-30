@@ -82,8 +82,4 @@ export class PortfolioComponent {
 
    constructor() { }
 
-   scaricaCurriculumVitae() {
-      alert('Sta arrivando');
-   }
-
 }
