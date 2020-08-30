@@ -1,4 +1,3 @@
-import { environment } from 'src/environments/environment';
 import { Component } from '@angular/core';
 import { faBook } from '@fortawesome/free-solid-svg-icons';
 
@@ -11,9 +10,6 @@ export class NavbarComponent {
 
    /** Icona libro */
    faBook = faBook;
-
-   /** Percorso risorse */
-   avatar = environment.resourcesPath + 'avataaars.png';
 
    constructor() { }
 
