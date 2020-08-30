@@ -1,12 +1,12 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: Build and Deploy
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
 on:
   push:
-    branches: 
+    branches:
       - master
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
@@ -24,3 +24,9 @@ jobs:
     # Runs a single command using the runners shell
     - name: All things angular
       run: AhsanAyaz/angular-deploy-gh-pages-actions
+      with:
+        github_access_token: 0d134b85c454a9b971fbc88d2695147d9b587792 # see the Configuration section for how you can create secrets
+        build_configuration: staging # The build environment for the app. please look configurations in your angular.json
+        base_href: /my-project/   # make sure this corresponds to https://<your_username>.github.io/<base_href>/
+        deploy_branch: gh-pages # The branch the action should deploy to.
+        angular_dist_build_folder: dist/my-project # The folder where your project is supposed to be after running ng build by the action.
