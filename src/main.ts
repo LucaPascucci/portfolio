@@ -8,6 +8,5 @@ if (environment.production) {
    enableProdMode();
 }
 
-// NOTE: definizione di quale modulo viene utilizzato all'avvio
 platformBrowserDynamic().bootstrapModule(AppModule)
    .catch(err => console.error(err));
