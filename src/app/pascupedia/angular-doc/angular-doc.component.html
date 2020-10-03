@@ -22,79 +22,6 @@
    </ul>
    <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs justify-content-center nav-fill">
       <li [ngbNavItem]="1">
-         <a ngbNavLink>Modulo</a>
-         <ng-template ngbNavContent>
-            Un modulo è un meccanismo per raggruppare componenti, direttive, pipe e servizi correlati, in modo tale da
-            poter
-            esser combinato con altri moduli per creare un'applicazione.<br>
-            Il decoratore che lo rappresenta è <b>@NgModule</b>
-            <h4>Tipologie di moduli</h4>
-            <ul>
-               <li>Root → In ogni progetto è presente un <b>AppModule</b>, modulo utilizzato come modulo principale di
-                  partenza
-                  per avviare l'applicazione </li>
-               <li>Features → Moduli specifici realizzati per l'applicazione</li>
-            </ul>
-            <pre
-               class="p-3"><code [highlight]="codeModule" [lineNumbers]="lineNumbers" [languages]="['typescript']"></code></pre>
-
-            <h4>Custom Module</h4>
-            Esempio di module features dove è che contiene un componente e servizio custom. La proprietà <b>export</b>
-            serve a
-            definire quali componenti rendere utilizzabili dall'esterno
-            <pre
-               class="p-3"><code [highlight]="codeModuleExport" [lineNumbers]="lineNumbers" [languages]="['typescript']"></code></pre>
-         </ng-template>
-      </li>
-      <li [ngbNavItem]="2">
-         <a ngbNavLink>Data Binding</a>
-         <ng-template ngbNavContent>
-            Modalità di comunicazione tra il codice typescript (logica dell’applicazione) e il template HTML. L’unica
-            parte visibile all’utente è il template HTML.<br>
-            Due modalità di comunicazione:
-            <ul>
-               <li>OutputData (informazioni da Typescript → Template HTML)</li>
-               <ul>
-                  <li>String interpolation</li>
-                  <li>Property binding</li>
-               </ul>
-               <li>React to (user) events (eventi da HTML → Typescript)</li>
-               <ul>
-                  <li>Event Binding</li>
-               </ul>
-            </ul>
-            <h4>String Interpolation</h4>
-            Passare una informazione definita su typescript direttamente al template HTML
-            <pre
-               class="p-3"><code [highlight]="codeStringInterpolation" [lineNumbers]="lineNumbers" [languages]="['html']"></code></pre>
-
-            <h4>Property Binding</h4>
-            Passare una informazione definita su typescript ad una proprietà di un tag template HTML
-            <pre
-               class="p-3"><code [highlight]="codePropertyBinding" [lineNumbers]="lineNumbers" [languages]="['html']"></code></pre>
-
-            <h4>Event Binding</h4>
-            Associazione di un evento, scatenato da un tag HTML, ad una funzione definita su typescript
-            <pre
-               class="p-3"><code [highlight]="codeEventBinding" [lineNumbers]="lineNumbers" [languages]="['html']"></code></pre>
-            La variabile <b>$event</b> contiene tutte informazioni scatenate dall’evento del tag HTML
-
-            <h4>Two-Way Binding</h4>
-            Possibilità di unire le due modalità di comunicazione e reagire contemporaneamente agli eventi generati
-            dall’utente tramite l’interazione con il template HTML e alle informazioni generate da una computazione nel
-            typescript.<br>
-            Lato Typescript
-            <pre
-               class="p-3"><code [highlight]="codeTwoWayBindingTypescript" [lineNumbers]="lineNumbers" [languages]="['typescript']"></code></pre>
-            Lato HTML
-            <pre
-               class="p-3"><code [highlight]="codeTwoWayBindingHTML" [lineNumbers]="lineNumbers" [languages]="['typescript']"></code></pre>
-            Effetti: Precarica il contenuto della variabile su typescript nel tag HTML (outputData) + reagisce agli
-            eventi di
-            modifica (user input event) cambiando dinamicamente il valore della variabile su typescript.
-         </ng-template>
-      </li>
-      <li [ngbNavItem]="3">
          <a ngbNavLink>Componente</a>
          <ng-template ngbNavContent>
             I component sono l’astrazione principale di angular attraverso i quali è possibile modularizzare le
@@ -151,7 +78,7 @@
             </ol>
          </ng-template>
       </li>
-      <li [ngbNavItem]="4">
+      <li [ngbNavItem]="2">
          <a ngbNavLink>Direttive</a>
          <ng-template ngbNavContent>
             Sono istruzioni nel DOM (template HTML), ci sono direttive date da Angular ed è possibile creare
@@ -183,7 +110,7 @@
             <h4>Custom directive</h4>
          </ng-template>
       </li>
-      <li [ngbNavItem]="5">
+      <li [ngbNavItem]="3">
          <a ngbNavLink>Servizi</a>
          <ng-template ngbNavContent>
             Il service è una parte del progetto Angular che lavora come repository centrale dove è possibile
@@ -208,7 +135,7 @@
             <hr>
          </ng-template>
       </li>
-      <li [ngbNavItem]="7">
+      <li [ngbNavItem]="4">
          <a ngbNavLink>Routing</a>
          <ng-template ngbNavContent>
             Utile per navigare tra più "component" senza averli tutti in una singola pagina.
@@ -236,7 +163,7 @@
             typescript.
          </ng-template>
       </li>
-      <li [ngbNavItem]="8">
+      <li [ngbNavItem]="5">
          <a ngbNavLink>Forms</a>
          <ng-template ngbNavContent>
             <h4>Template Driven Form</h4>
@@ -310,7 +237,7 @@
                class="p-3"><code [highlight]="codeReactiveFormValuesChanges" [lineNumbers]="lineNumbers" [languages]="['typescript']"></code></pre>
          </ng-template>
       </li>
-      <li [ngbNavItem]="9">
+      <li [ngbNavItem]="6">
          <a ngbNavLink>Richieste HTTP, API, servizi asincroni</a>
          <ng-template ngbNavContent>
             Per prima cosa importiamo <b>HttpModule</b> all’interno del file di definizione del modulo della nostra
