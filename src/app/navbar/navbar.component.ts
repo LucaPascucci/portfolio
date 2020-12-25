@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-import { faBook } from '@fortawesome/free-solid-svg-icons';
+import {Component} from '@angular/core';
 
 @Component({
    selector: 'app-navbar',
@@ -8,9 +7,7 @@ import { faBook } from '@fortawesome/free-solid-svg-icons';
 })
 export class NavbarComponent {
 
-   /** Icona libro */
-   faBook = faBook;
-
-   constructor() { }
+   constructor() {
+   }
 
 }

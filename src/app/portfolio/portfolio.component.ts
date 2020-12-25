@@ -1,26 +1,21 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {
-   faInfoCircle,
-   faBriefcase,
-   faUniversity,
-   faMeteor,
    faAward,
-   faSearch,
-   faGraduationCap,
-   faLaptopCode,
+   faBriefcase,
    faCalendarAlt,
-   faHome,
    faEnvelope,
+   faFileDownload,
+   faGraduationCap,
+   faHome,
+   faInfoCircle,
+   faLaptopCode,
+   faMeteor,
    faMotorcycle,
-   faFileDownload
+   faSearch,
+   faUniversity
 } from '@fortawesome/free-solid-svg-icons';
 
-import {
-   faTwitter,
-   faTelegram,
-   faLinkedin,
-   faSkype
-} from '@fortawesome/free-brands-svg-icons';
+import {faLinkedin, faSkype, faTelegram, faTwitter} from '@fortawesome/free-brands-svg-icons';
 
 @Component({
    selector: 'app-portfolio',
@@ -80,6 +75,7 @@ export class PortfolioComponent {
    /** Icona download */
    faFileDownload = faFileDownload;
 
-   constructor() { }
+   constructor() {
+   }
 
 }
