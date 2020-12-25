@@ -9,6 +9,8 @@ import {Router} from '@angular/router';
 export class AppComponent {
    title = 'portfolio';
 
+   // TODO Aggiornare ad Angular 11 -> https://update.angular.io/?v=10.0-11.0
+   // TODO Aggiornare ad Angular 12 -> https://update.angular.io/?v=11.0-12.0
    constructor(public router: Router) {
    }
 }
